@@ -1,0 +1,60 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-06-03T15:26:41-06:00
+
+====== Zero Code Data Quality 201 ======
+Created Monday 03 June 2024
+
+Backlink: [[Home]]
+==== Zero Code Data Quality: Revolutionizing Data Quality with Snowflake ====
+=== Speakers: ===
+* Snowflake IT Data Science Team
+=== Notes: ===
+* A lot of this talk is based off of the IT Data Science team experiences working on their own data quality.
+* Data Quality at Snowflake
+	* Why quality matters
+		* Quality = Accurate/reliable decision making
+		* Operational Efficiency
+		* Reduced Risks
+		* Compliance
+	* Challenges in Handling Data Quality at Snowflake
+		* Scale and Velocity of data
+			* 1000s of data sources with streaming logs
+		* Volume and variety of data sources
+			* They wanted to use an ML based system due to this
+		* Monitoring views without getting actual access to data
+		* Data ingestion rate for different sources
+			* You do not want a system that constantly checks data quality outside of specific cases.
+		* Downstream impact and resolution
+			* This is where they had the largest challenge - getting admin and teams handling the impact and reoslution. They could identify quality issues, but had issues communicating and having that be actionable.
+* Data Quality Tests
+	* Freshness Test
+		* Recency of data at ingestion cadence
+	* Completness and Validation Test
+		* Changes in data types within all fields
+		* Comparison of null values in columns based on historical trends
+		* Detection of alterations in the Data Definition Language (DDL)
+	* Anomaly Detection
+		* Evaluation of the volume of data to identify irregularities
+	* Accuracy Tests
+		* Tailored for unique scenarios - including drift detection.
+			* Drift Detection - example being a score moving from 0-5 range to 0-10, 0-100, etc. This required defined alowed values.
+		* Membership tests: consistency across upstream/downstream sources, and relationships between tables.
+* Design Principles
+	* Minimized manual user intervention
+	* High reliability and accuracy of systems 
+		* This type of system tends to generate a lot of alerts.
+	* Contextualise anomalies
+* **Workflow**
+	* **Data Sources > Onboarding > Monitoring > Alert/Reporting > Data Quality**
+* Slides 
+{{.\pasted_image003.png}}
+{{.\pasted_image004.png}}
+{{.\pasted_image005.png}}
+* Demo
+	* Streamlit app - they have dashboards published for summary stats.
+	* They have user senter table names, then pull metadata, to onboard new sources. I assume this is done moving from dev/personal-sandboxes to a prod or a staging schema.
+	* Individual pipelines and tables have stats.
+
+=== End Notes: ===
+

@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-06-03T13:21:42-06:00
+
+====== Home ======
+Created Monday 03 June 2024
+
+If you are attending this event in the future: [[Event Attendance Plan & Advice]]
+
+* These notes were taken using Zim, and maintained in a Git repo throughout the event. 
+	* The public repo on github is a clone without commit history - let me know if actual history needs to be accessed from the private repo for any reason.
+
+You can view all of the events I notated on this page by order of quality/relevance, or on the schedule here: //[[Pages with Schedule]]//
+=== Sessions by order of quality/relevance: ===
+[[Compilation of takeaways and releases]]
+*****
+* [[Platform Keynote K2]]
+* [[Snowflake Notebooks]] Room 157
+* [[What's New:Orchestration]] Room 151
+* Python Data Pipelines:
+	* [[What's New:Python Data Pipelines]] Builders Hub Theatre
+	* [[What's New: Python Data Pipelines 2]]
+* [[Query Optimization from Tenable]]
+****
+* [[What's New: Observability in Snowflake]] Basecamp South Theater 1
+* [[Zero Code Data Quality 201]]
+***
+* [[Holistic Data Governance]] 157
+* [[Data Sharing]]
+**
+* [[Opening Keynote K1]]
+* [[Builders Keynote K3]] Hall C Exhibit
+* [[Forecasting with Custom Streamlit App]]
+
+== Only what's new: ==
+* [[What's New:Orchestration]] Room 151
+* [[What's New: Observability in Snowflake]] Basecamp South Theater 1
+* [[What's New:Python Data Pipelines]] Builders Hub Theatre
+* [[What's New: Python Data Pipelines 2]]
+
+== Only keynotes: ==
+* [[Opening Keynote K1]] Hall C Exhibit
+* [[Platform Keynote K2]] Hall C Exhibit
+* [[Builders Keynote K3]] Hall C Exhibit
+
+//**To-be-recovered notes:**//
+10:00 - 10:20 [[Accelerated Value w/ Data Transformation]] Vertical Village Theater 2
+11:00 - 11:20 [[How to Deploy CI/CD in Snowflake AD231]] Vertical Village Theater 2
+12:00 - 12:20 [[Optimize Performance and Costs OO107]] North Theater 1
+12:30 - 1:15 [[Distributed Training w/ Notebooks and ML]]
+
+//**Partial notes:**//
+* (OVERLAPPED) [[Hybrid tables talk]]
+
+//**No notes:**//
+* (NO NOTES) Data Vaults GP102 (Village Theater 1)
+* (REPLACED) Democratizing Data - Domain-Driven Architecture - Vertical Village Theatre 2
+* (REPLACED) "One Platform"
+* (REPLACED) What's New: Performance and Cost Optimization Room 156
+* (SKIPPED) Unifying Data for Enhanced Financial Services (Village Theater 1)
+* (SKIPPED) Democratizing Data-Driven Decision Making
+* (SKIPPED) Boosting Snowflake Performance
+* (OVERLAPPED) Basecamp Happy Hour
+* (OVERLAPPED) Honeywell Case Study - Optimizing Snowflake
+* Welcome Reception - Basecamp
+* Snowbash (Esplanade Yerba Buena Gardens)
+
+Other pages:
+[[Notes Template]]
+

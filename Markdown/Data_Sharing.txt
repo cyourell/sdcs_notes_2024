@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-06-03T13:58:29-06:00
+
+====== Data Sharing ======
+Created Monday 03 June 2024
+
+Backlink: [[Home]]
+==== Collaboration: A Business Necessity to Accelerate Digital Transformation ====
+=== Speakers: ===
+* Colm Moynihan - Senior Solution Architect @ Snowflake
+=== Notes: ===
+* Background
+	* Talk was inspired by Gartner: Data Sharing is a Business Necessity to Accelerate Digital Business
+	* Timeline:
+		* 1st gen - FTP/File-based
+			* ETL required both ways.
+			* Proprietary APIs.
+			* Never in real time.
+			* Multiple copies of data
+		* 2nd gen - Cloud IaaS 
+			* Cloud Object Store
+			* File based
+			* ETL required
+			* J2EE Apps
+			* Java APIs
+		* 3rd gen - Snowflake Data Cloud
+			* Marketplace
+			* Multi-cloud
+			* Database/table/view
+			* No ETL
+			* Native Apps
+			* Real-Time
+			* Security 6 Governance
+			* Container Services
+* Consuming Data
+	* Snowflake Marketplace 
+		* Currently 2500 datasets/services/apps & growing 104% year over year adoption
+		* This can be done privately as well
+* Providing Data
+	* This can be used to monetize data - it can be published on the marketplace publically.
+		* There are a lot of options for paid providers, including customizing the pricing (month, per query, etc), and providing multiple "grades" of the data.
+	* This can be used cross-platform as long as regions match.
+	* There is a "Provider Studio" for these functions.
+* Collaborative Apps
+	* Very few people have built these
+	* Dockerized can be pushed to Snowflake using Snowpark.
+	* Snowflake Data Clean App is a native app in Snowflake, installed to our instance from marketplace. Built-in privacy and governance.
+	* Experian has an app for consumer credit
+* Summary
+	* Benefits of Collaboration
+		* Break down data silos and reduce costs
+		* Build collaborative culture
+		* Enhance customer/partner experience - single view of data
+* Quesitons
+	* Is it possible to publish private datasets/apps only shared to specific users?
+		* Yes. You would need a "locator" for this, for the user.
+	* What do most providers charge?
+		* Monthly/Annually is the norm, not per query or per M records.
+=== End Notes: ===
+* We should evaluate the Snowflake Marketplace for valuable free datasets.
+* We should check out apps as well.
+* Chcek out Experian credit score datasets on mraketplace (or do they use an app?)
+* We can also use up to 10% unused credits on our plan for buying data, so when those credits expire we can shop around.
+

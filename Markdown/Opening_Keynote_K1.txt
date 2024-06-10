@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-06-09T18:48:09-06:00
+
+====== Opening Keynote K1 ======
+Created Sunday 09 June 2024
+
+Backlink: [[Home]]
+==== Opening Keynote, K1 ====
+=== Notes: ===
+* This talk was a lot of investor-facing speech, with an emphasis on what they are doing with AI.
+* New CEO gave intro
+	* Opened with some base stats on the business
+		* 50% Customers are using Snowpark
+	* Trying to brand "AI Data Cloud" heavily, with Cortex.
+* Announced Polaris Catalog: Open source catalog for Apache Iceberg
+* Focusing on more rapid deployment to customers - less preview/beta features, more GA->Prod for users.
+* Fireside with NVIDIA CEO on AI.
+* Group discussion with a variety of industry leaders on using data/snowflake.
+
+=== End Notes: ===
+* 

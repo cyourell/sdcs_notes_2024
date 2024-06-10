@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-06-09T23:12:40-06:00
+
+====== Compilation of takeaways and releases ======
+Created Sunday 09 June 2024
+
+*** WIP ***
+
+* [[Snowflake Notebooks]]
+	* Notebook scheduling seems pretty useful for sending summaries, or standing up would-be tasks faster.
+		* Since notebooks have git (does this //require// integration?) it may also be better for drafting tasks over time.
+	* Check out snowflake-ml-python
+	* All of these new feature are in public preview except containerized options.
+	* Snowflake-managed containers can run notebooks too, so if we want packages that aren't on snowflake anaconda, then you can use that for anything else you would want to pip install OR use GPUs.
+* [[What's New:Orchestration]]
+	* Consider using task graph UI for managing tasks, not .SQL files.
+	* There is an option to trigger tasks on data change rather than on time we may want to learn about, when we have tasks running from BI/prod
+		* **Triggered tasks are in public preview now**
+	* Task graphs have success triggers, and **failure notifications as a feature**
+* [[What's New:Python Data Pipelines]] and [[What's New:Python Data Pipelines 2]]
+	* Snowpark pandas API seems extremely useful
+	* During demo they showed a task history chart and a few other tools - I think these were in snowsight UI //databases->tasks//?
+		* Check out these features
+* [[Query Optimization from Tenable]]
+	* They had a lot of good info exploring micro-partitions here, and understanding it will help any CRUD work we have.
+	* Consider applications for their "Deferred merge" pattern (hot/cold data)
+* [[What's New:Observability in Snowflake]]
+	* They did a pretty solid walkthrough using query telemetry and "trail", but I'm not sure which release type snowflake trail is on.
+* [[Zero Code Data Quality 201]]
+	* Check the Data Quality Tests section in this note. There's a lot of good info in this event.
+	* Example workflow ("onboarding" a new data source):
+		* Data Sources > Onboarding > Monitoring > Alert/Reporting > Data Quality
+* [[Data Sharing]]
+	* We should evaluate the Snowflake Marketplace for valuable free datasets.
+	* Check out Experian credit score datasets on marketplace (or do they use an app?)
+	* **We can use up to 10% unused credits on our plan for buying data, so when those credits are about to expire we can shop around.**
+* [[Forecasting with Custom Streamlit App]]
+	* This session was not very relevant for us, but we should look into streamlit apps.
+* [[Platform Keynote K2]]
+	* **Now available:**
+		* Iceberg Tables
+	* **Generally available soon:**
+		* Document AI
+		* Snowflake Copilot
+	* **Public preview:**
+		* Data Lineage / ML Lineage
+		* Git integration
+		* Database change management
+		* Snowflake CLI
+		* Snowflake notebooks
+		* Snowpark Pandas API
+	* **Private preview:**
+		* Serverless task flex
+	* **Other releases**
+		* Polaris catalog
+		* Snowflake Trail
+	* Takeaways:
+		* We should be setting up serverless task flex once it is available.
+		* Find cases where we would want to use Internal Marketplace
+		* Know Lineage features - these seem very useful. 
+		* Snowflake notebooks, Pandas API and Git will all be very useful.
+
+
+

@@ -1,0 +1,81 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-06-04T14:05:19-06:00
+
+====== Query Optimization from Tenable ======
+Created Tuesday 04 June 2024
+
+Backlink: [[Home]]
+==== Tenable's Journey to Lightning-Fast Query Speeds, AD307 ====
+=== Speakers: ===
+* Neal Butler, Tom Milner
+=== Notes: ===
+{{.\pasted_image001.png}}
+* Agenda:
+	* Measure first
+		* {{.\pasted_image002.png}}
+		* Measure > Monitor > Adapt
+		* Query history/query profile
+			* {{.\pasted_image004.png}}
+	* Understanding micro partitions (speaker emphasized this)
+		* deferred merge
+		* clustering
+		* insert overwrite
+	* aggregations
+	* search optimization service
+	* reduce query compilation times
+		* careful with views
+		* reduce joins (denormalize data model, don't have tables)
+	* join elimination (RELY constraint on foreign keys) 
+	* Unistore
+* Measurements - they shared a query and field details for their meausrements - TODO insert slides
+* There was another query shared on slides that I missed - watch presentation and insert if needed.
+* Micro-partitions
+	* {{.\pasted_image005.png}}
+	* {{.\pasted_image006.png}}
+	* Steps to control
+		* Auto-clustering - let snowflake take care of it (adding a cluster key to snowflake table)
+			* Use field that you consistently query the table with
+			* Good for small tables with low level of updates
+			* Expensive for tables with high level of data changes
+		* ORDER BY key fields for your INSERT statements
+			* For any insert, you should be using an ORDER, because without, it scatters records across micropartitions
+		* Insert Overwrite with ORDER BY key fields
+			* Similar to above, but for mid-sized tables. 
+		* Avoid merge statements
+			* You cannot do an order with a merge, so separate statements to avoid merge. 
+		* Deferred marge pattern
+			* {{.\pasted_image007.png}}
+			* This method is used to periodically move changes (hot) to a large table (cold). There is a view that eliminates any overlaps included, in case all records are needed ASAP
+* Precomputed aggregations
+	* {{.\pasted_image008.png}}
+	* Moved from realtime aggregations to precomputed aggregations
+		* This moves the cost of read to precompute
+			* Precomputed values materialized to tables
+			* emliminated joins and filters in UI code
+			* only precompute where data has changed using streams
+			* cluster tables for filtering and transform - partition switching
+			* scheduled with tasks
+		* stream -> delete -> aggregate -> insert
+	* {{.\pasted_image009.png}}
+	* {{.\pasted_image010.png}}
+	* Reduce query compilation times
+		* {{.\pasted_image011.png}}
+		* Join elimination using RELY will help optimize - CONSTRAINT, FOREIGN KEY, REFERENCES
+	* Unistore
+		* {{.\pasted_image012.png}}
+		* {{.\pasted_image013.png}}
+		* {{.\pasted_image014.png}}
+		* Easy to convert - signature remains the same
+		* Only significant differences:
+			* FK enforced on hybrid tables
+			* FK only can be created between hybrid tables
+			* Uniqueness on PK enforced 
+			* Useful for data quality
+	* Questions 
+		* Mostly revolved around avoid merge statements - for huge fact tables, they have to work on merges, but would work with a temp table, delete, then insert for updates.
+		* Cluster keys don't seem to add much cost, but they use that for insurance after the other changes discussed in this talk.
+		* What was the frequency moving hot to cold? Usually every 24 hr, one table every 3 hr. Hot table is deleted once it's in cold.
+			* The hot/cold view shows hot data if it exists, else cold.
+=== End Notes: ===
+* 

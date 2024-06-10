@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-06-05T15:36:44-06:00
+
+====== Python Data Pipelines 2 ======
+Created Wednesday 05 June 2024
+
+Backlink: [[Home]]
+==== What's New: Python Data Pipelines ====
+I went to a second, shorter talk on this here [[Python Data Pipelines]]
+=== Notes: ===
+* {{.\pasted_image.png}}
+* {{.\pasted_image001.png}}
+* {{.\pasted_image002.png}}
+* {{.\pasted_image003.png}}
+* {{.\pasted_image004.png}}
+* {{.\pasted_image006.png}}
+* {{.\pasted_image007.png}}
+* {{.\pasted_image008.png}}
+* Presenters moved to a demo, identical to [[Python Data Pipelines]]
+
+=== End Notes: ===
+* 

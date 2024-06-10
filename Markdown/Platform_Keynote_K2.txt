@@ -1,0 +1,73 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-06-09T19:55:30-06:00
+
+====== Platform Keynote K2 ======
+Created Sunday 09 June 2024
+
+Backlink: [[Home]]
+==== Platform Keynote K2 ====
+=== Notes: ===
+* From President of Product/Benoit Dageville
+	* Snowpark to use the same Snowflake engine, but for Python, Java, Scala dataframes
+	* Snowpark container services allows you to deploy containerized services w/in Snowflake
+		* You can also access GPUs on-demand
+	* Snowflake Arctic - family of enterprise-grade models for LLM
+		* Private clusters are spun up for every customer account
+* From EVP Product Christian Kleinerman
+	* Emphasis on getting value out of unstructured data
+		* Announcing: Document AI
+			* **Generally available "soon"**
+			* Ask questions in a natural language, then validate answers.
+			* Early example: Northern Trust processing data from financial documents to automate futures reconciliation
+			* Ingestion for document AI:
+				* File processors are set up for this - you can set up documents to be ingested then pushed to document AI
+		* Announcing: **Serverless tasks flex**
+			* Allows you to specify a window for task runs, then it will cost-optimize for running - not a specific hhmm time.
+		* Iceberg tables **now available**
+			* An Iceberg table uses the Apache Iceberg open table format specification, which provides an abstraction layer on data files stored in open formats and supports features such as:
+				* ACID (atomicity, consistency, isolation, durability) transactions
+				* Schema evolution
+				* Hidden partitioning
+				* Table snapshots
+		* More Polaris Catalog announcements - also from K1
+			* https://www.snowflake.com/blog/introducing-polaris-catalog/
+		* Microsoft + Snowflake partnership info:
+			* Major expansion in MS+Snowflake partnership.
+			* MS Announced "fabric" to merge use of powerBI/AI/Azure
+			* Snowflake announced Onelake support in conjunction with MS announcing Iceberg support
+		* Snowflake Horizon updates
+			* **Data Classification Interface**
+				* Automatic tag propogation downstream. See [[Holistic Data Governance]]
+			* **Data Lineage - public preview**. Where data comes from/where it goes.
+				* ML Lineage
+		* Trust Center - seems very useful for security. Can find users without MFA and etc. Generally available soon.
+* From Lead Dev advocate / Dash Desai
+	* Showing off Internal Marketplace for datasets, apps, AI models, docs.
+		* Demo pulling an unknown dataset from marketplace then using AI to generate a query.
+* Siemens VP of Data - Dietmar Mauersberger
+	* Success story migrating to Snowflake and it's support for their uses.
+* From EVP Product Christian Kleinerman
+	* Streamlit in Snowflake - already being used heavily by customers
+	* Announcing: **Snowpark Container Services now available**
+	* Native Apps can now be used with container services
+		* Rapid fire to speakers in the audience that were using native apps for specific uses.
+* **Demo for native app**
+	* Hooking a containerized app to GPU for image generation
+	* Hybrid tables
+* **Now in public preview:**
+	* **Git integration**
+	* **Database change management**
+	* **Snowflake CLI**
+	* **Snowflake notebooks**
+	* **Snowpark Pandas API**
+* **Snowflake Copilot now generally available**
+* **Snowflake trail announcement** 
+	* Also see [[What's New:Orchestration]]
+* Lots of Cortex announcements after this, Cortex Analyst, Cortex Search 
+
+=== End Notes: ===
+* We should be using serverless task flex/cost-optimize task windows immediately. 
+* Find cases where we would want to use Internal Marketplace
+* Look into Lineage, we should be utilizing this.
+* Snowflake notebooks, Pandas API and Git will all be very useful

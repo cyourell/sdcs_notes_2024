@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-06-04T13:21:11-06:00
+
+====== Python Data Pipelines ======
+Created Tuesday 04 June 2024
+
+Backlink: [[Home]]
+==== What's New: Python Data Pipelines, WN212 ====
+I went to a second talk on this here [[Python Data Pipelines 2]]
+=== Notes: ===
+* Addressing current challenges
+	* Siloed Data
+	* Fragmented Practice
+		* Authoring, tooling, devops, orchestration, observability
+* End-to-end python pipelines
+	* Authoring / experiences
+	* Transformation
+		* Snowpark pandas
+	* Pipeline orchestration
+	* Dev Ops
+* Demo
+	* A lot of this was showing snowflake pandas API using the same functions pandas would have by default, but with snowflake data sources from their new library instead. 
+	* Outline
+		* Entire pipeline will be built in notebooks
+		* Snowpark pandas will be used for aggregate/visualize and store in snowpark pandas table
+		* Serverless tasks will be used to orchestrate
+	* import snowark pandas API - modin.pandas, snowflake.snowpark.modin.plugin
+	* spd.read_snowflake using {DATA_PATH}
+	* Continued to demo calcs as you would in pandas, nothing very different here
+	* Introduce a different table from Snowflake
+		* spd.read_snowflake(F"{DATA_PATH}.tablename)
+	* to_snowflake at the end which has arguments for if_exists and etc. Similar to sqlalchemy.
+	* This can all be saved as a stored procedure, within the notebook.
+	* "CALL stored_procedure('')
+	* task creation: TASK(args)
+	* you can SHOW TASKS LIKE '%' after that within notebooks
+		* DEFAULT STATE IS SUSPENDED - ACTIVATE AFTER CREAITON
+	* The demo notebook is connected through git, which is all available on the top right through an integration. 
+
+{{.\pasted_image.png}}
+=== End Notes: ===
+* During demo they had a task history chart - with a number of other tools, I should look into this. They were in snowsight UI databases->tasks?
